@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Work Sans', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(to right, #add8e6, #0b45b1); /* Light blue to dark blue */
+    color: white; /* Ensure text is readable */
+    width: 100%; /* Make the header span the full width */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.Intel_logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.h1_header {
+    margin: 0 auto;
+    display: block;
+    height: auto;
+    width: 75%;
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing below the h1 */
+    border-bottom: 2px solid rgb(68, 154, 252); /* Add a dividing line */
+    padding-bottom: 10px; /* Add padding for spacing above the line */
+}
+
+.p_header {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Quicksand', Arial, sans-serif;
+    text-align: center;
+    color: white; /* Dark blue for headings */
+}
+
+h2 {
+    font-family: 'Quicksand', Arial, sans-serif;
+    text-align: center;
+}
+
+footer {
+    color: black; /* Ensure text is readable */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    font-size: 12px;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Add spacing between divs */
+    padding: 10px; /* Add padding inside the section */
+    box-sizing: border-box; /* Include padding in width calculation */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+main section::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+main section:hover {
+    scrollbar-width: thin; /* Show a thin scrollbar in Firefox */
+}
+
+main section:hover::-webkit-scrollbar {
+    display: block; /* Show scrollbar in WebKit browsers */
+    height: 8px; /* Set scrollbar height */
+}
+
+main section:hover::-webkit-scrollbar-thumb {
+    background-color: #888; /* Style the scrollbar thumb */
+    border-radius: 4px; /* Add rounded corners */
+}
+
+main section:hover::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Style the scrollbar track */
+}
+
+main section div {
+    flex: 0 0 auto; /* Prevent divs from shrinking or growing */
+    width: 300px; /* Set a fixed width for each div */
+    background-color: #ffffff; /* Add a background color for visibility */
+    border: 1px solid #ccc; /* Add a border for separation */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 15px; /* Add padding inside each div */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: relative; /* Ensure child elements are positioned relative to the div */
+    overflow: hidden; /* Prevent content from overflowing the div */
+}
+
+main section div img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px; /* Optional: Add rounded corners for consistency */
+}
+
+main section div p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+main section div:hover p {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    main section {
+        flex-direction: column; /* Stack boxes vertically */
+        overflow-x: visible; /* Disable horizontal scrolling */
+        gap: 10px; /* Adjust spacing between boxes */
+    }
+
+    main section div {
+        width: 100%; /* Make boxes take full width */
+    }
+}
